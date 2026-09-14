@@ -1,0 +1,13 @@
+create_clock -period 10.000 -name standard_clock -waveform {0.000 5.000} [get_ports clk]
+
+set_property IOSTANDARD LVCMOS33 [get_ports clk]
+set_property IOSTANDARD LVCMOS33 [get_ports rst]
+set_property IOSTANDARD LVCMOS33 [get_ports push]
+set_property IOSTANDARD LVCMOS33 [get_ports pop]
+set_property IOSTANDARD LVCMOS33 [get_ports clear]
+set_property IOSTANDARD LVCMOS33 [get_ports {din[*]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {dout[*]}]
+set_property IOSTANDARD LVCMOS33 [get_ports isfull]
+set_property IOSTANDARD LVCMOS33 [get_ports isempty]
+set_property IOSTANDARD LVCMOS33 [get_ports pusherror]
+set_property IOSTANDARD LVCMOS33 [get_ports poperror]
