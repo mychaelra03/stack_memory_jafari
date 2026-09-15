@@ -24,11 +24,6 @@ Each stored memory word is 8 bits long. The module diagram is shown below:
 
 + POP [1 bit]: Used to pop (release) an element from the stack; its assertion triggers the output of the word contained in the last element of the stack through the DOUT signal.
 
-One possible set of signal behaviour is described in the image down below:  
-
-![image info](./asset/behavioural.png)  
-
-
 ## Output Signals
 
 + DOUT [8 bit]: 8-bit output word for reading the data contained in the last element of the stack. It is populated following the assertion of the POP input signal, only if the stack is not empty.
@@ -37,7 +32,11 @@ One possible set of signal behaviour is described in the image down below:
 
 + POPERROR [1 bit]: Asserted when attempting to free a slot from the stack via POP while it is empty (i.e., when ISEMPTY is asserted).
 
-+ ISFULL [1 bit]: Automatically asserted when the stack is completely full.
++ ISFULL [1 bit]: Automatically asserted when the stack is completely full.  
+
+One possible set of signal behaviour is described in the image down below:  
+
+![image info](./asset/behavioural.png)  
 
 ## Project strengths
 + Reuse of components maximized across all the project with **generic** and **generate** constructs.
